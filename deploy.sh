@@ -1,26 +1,4 @@
 #!/usr/bin/env sh
+yarn build
 
-# 发生错误时终止
-set -e
-
-# 构建
-npm run build
-
-# 进入构建文件夹
-cd dist
-
-# 放置 .nojekyll 以绕过 Jekyll 的处理。
-echo > .nojekyll
-
-# 如果你要部署到自定义域名
-# echo 'www.example.com' > CNAME
-
-git init
-git checkout -B master
-git add -A
-git commit -m 'deploy'
-
-# 如果你要部署在 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:nfym/vite-vue-template-page.git master:gh-pages
-
-cd -
+git subtree push --prefix dist origin gh-pages
