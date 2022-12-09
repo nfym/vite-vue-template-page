@@ -5,6 +5,8 @@
   "homepage": "https://nfym.github.io/vite-vue-template-page",
   "type": "module",
   "scripts": {
+    "bootstrap": "yarn install",
+    "serve": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
