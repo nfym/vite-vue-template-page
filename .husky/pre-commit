@@ -3,4 +3,4 @@
 
 npm run lint:eslint
 
-npm run lint-staged
+npm run lint:lint-staged

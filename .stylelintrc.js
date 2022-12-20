@@ -3,7 +3,7 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',
-    'stylelint-config-rational-order',
+    'stylelint-config-rational-order'
   ],
   customSyntax: 'postcss-less',
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
