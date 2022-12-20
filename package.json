@@ -5,7 +5,7 @@
   "homepage": "https://nfym.github.io/vite-vue-template-page",
   "scripts": {
     "cz": "czg",
-    "bootstrap": "yarn install",
+    "bootstrap": "pnpm install",
     "serve": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -15,6 +15,9 @@
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:lint-staged": "lint-staged",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules",
+    "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -37,6 +40,7 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
     "stylelint": "^14.16.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-rational-order": "^0.1.2",
