@@ -1,5 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
+
+import { OUTPUT_DIR, BASE_NAME } from "./build/constant";
 // 指定解析路径
 import { resolve } from "path";
 const pathResolve = (dir: string) => resolve(__dirname, dir);
@@ -11,7 +13,7 @@ export default defineConfig(({ command, mode }) => {
   const isBuild = command === "build"; // 生产环境
   return {
     plugins: [vue()],
-    base: "vite-vue-template-page",
+    base: BASE_NAME,
     resolve: {
       // 路径别名
       alias: [
@@ -50,6 +52,7 @@ export default defineConfig(({ command, mode }) => {
     },
     // 生产环境打包配置
     build: {
+      outDir: OUTPUT_DIR,
       minify: "terser",
       terserOptions: {
         compress: {
