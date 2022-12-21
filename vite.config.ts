@@ -1,34 +1,34 @@
-import { defineConfig, loadEnv } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig, loadEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-import { OUTPUT_DIR, BASE_NAME } from "./build/constant";
+import { OUTPUT_DIR, BASE_NAME } from './build/constant'
 // 指定解析路径
-import { resolve } from "path";
-const pathResolve = (dir: string) => resolve(__dirname, dir);
+import { resolve } from 'path'
+const pathResolve = (dir: string) => resolve(__dirname, dir)
 
 export default defineConfig(({ command, mode }) => {
-  const root = process.cwd();
-  const env = loadEnv(mode, root);
-  const isDev = command === "serve"; // 开发环境
-  const isBuild = command === "build"; // 生产环境
+  const root = process.cwd()
+  const env = loadEnv(mode, root)
+  const isDev = command === 'serve' // 开发环境
+  const isBuild = command === 'build' // 生产环境
   return {
     plugins: [vue()],
     base: BASE_NAME,
     resolve: {
       // 路径别名
       alias: [
-        { find: "@", replacement: pathResolve("src") },
-        { find: "#", replacement: pathResolve("src/types") },
-        { find: "api", replacement: pathResolve("src/api") },
-        { find: "components", replacement: pathResolve("src/components") },
-        { find: "utils", replacement: pathResolve("src/utils") },
-        { find: "build", replacement: pathResolve("build") },
+        { find: '@', replacement: pathResolve('src') },
+        { find: '#', replacement: pathResolve('src/types') },
+        { find: 'api', replacement: pathResolve('src/api') },
+        { find: 'components', replacement: pathResolve('src/components') },
+        { find: 'utils', replacement: pathResolve('src/utils') },
+        { find: 'build', replacement: pathResolve('build') },
         // 处理 vue-i18n 的控制台警告信息
         {
-          find: "vue-i18n",
-          replacement: "vue-i18n/dist/vue-i18n.cjs.js",
-        },
-      ],
+          find: 'vue-i18n',
+          replacement: 'vue-i18n/dist/vue-i18n.cjs.js'
+        }
+      ]
     },
     server: {
       host: true,
@@ -38,29 +38,29 @@ export default defineConfig(({ command, mode }) => {
       https: false,
       // 设置代理，根据项目实际情况配置
       proxy: {
-        "/api": {
+        '/api': {
           target: env.VITE_API_BASE_URL, // 后台服务地址
           changeOrigin: true, // 是否允许不同源
           secure: false, // 支持https
           prependPath: false,
           rewrite: (path) => {
-            console.log(path);
-            return path.replace(/^\/api/, "");
-          },
-        },
-      },
+            console.log(path)
+            return path.replace(/^\/api/, '')
+          }
+        }
+      }
     },
     // 生产环境打包配置
     build: {
       outDir: OUTPUT_DIR,
-      minify: "terser",
+      minify: 'terser',
       terserOptions: {
         compress: {
           keep_infinity: true, // 防止 Infinity 被压缩成 1/0，这可能会导致 Chrome 上的性能问题
           drop_console: true, // 生产环境去除 console
-          drop_debugger: true, // 生产环境去除 debugger
-        },
-      },
-    },
-  };
-});
+          drop_debugger: true // 生产环境去除 debugger
+        }
+      }
+    }
+  }
+})
