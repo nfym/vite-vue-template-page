@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Registry
+        run: npm config set registry https://registry.npm.taobao.org/
+
       - name: Install
         # 安装依赖
         run: npm install
