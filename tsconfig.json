@@ -14,51 +14,20 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "types": [
-      "vite/client"
-    ],
+    "types": ["vite/client"],
+    "noEmit": true,
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "utils/*": [
-        "src/utils/*"
-      ],
-      "api/*": [
-        "src/api/*"
-      ],
-      "components/*": [
-        "src/components/*"
-      ],
-      "#/*": [
-        "types/*"
-      ],
-      "build": [
-        "build/*"
-      ]
+      "@/*": ["src/*"],
+      "utils/*": ["src/utils/*"],
+      "api/*": ["src/api/*"],
+      "components/*": ["src/components/*"],
+      "#/*": ["types/*"],
+      "build": ["build/*"]
     },
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "typeRoots": [
-      "./node_modules/@types/",
-      "./types"
-    ]
+    "typeRoots": ["./node_modules/@types/", "./types"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "build/**/*.ts",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "tsconfig.json",
-    "dist"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "build/**/*.ts", "tests/**/*.ts", "tests/**/*.tsx"],
+  "exclude": ["node_modules", "tsconfig.json", "dist"]
 }
