@@ -3,7 +3,7 @@ name: VITE DEPLOY TEST
 on:
   push:
     # master 分支有 push 时触发
-    branches: [master]
+    branches: [master, feature]
 
 jobs:
   deploy:
