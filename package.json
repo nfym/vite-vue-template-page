@@ -9,6 +9,7 @@
     "serve": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "deplay": "pnpm build --mode deploy",
     "preview": "vite preview",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",

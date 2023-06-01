@@ -9,11 +9,12 @@ const pathResolve = (dir: string) => resolve(__dirname, dir)
 export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
+  const isDeplayInGithub = env.VITE_DEPLOY_URL === 'github'
   const isDev = command === 'serve' // 开发环境
   const isBuild = command === 'build' // 生产环境
   return {
     plugins: [vue()],
-    base: BASE_NAME,
+    base: isDeplayInGithub ? BASE_NAME : '/',
     resolve: {
       // 路径别名
       alias: [
