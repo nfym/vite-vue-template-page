@@ -1,9 +1,13 @@
+# 将静态内容部署到 GitHub Pages 的简易工作流程
 name: VITE DEPLOY TEST
 
 on:
   push:
-    # master 分支有 push 时触发
+    # 推送到指定分支时触发
     branches: [master, feature]
+
+  # 这个选项可以使你手动在 Action tab 页面触发工作流
+  workflow_dispatch:
 
 jobs:
   deploy:
