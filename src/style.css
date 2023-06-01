@@ -13,6 +13,10 @@
   text-size-adjust: 100%;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 a {
   color: #646cff;
   font-weight: 500;
