@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import { OUTPUT_DIR, BASE_NAME } from './build/constant'
+import { OUTPUT_DIR } from './build/constant'
 // 指定解析路径
 import { resolve } from 'path'
 const pathResolve = (dir: string) => resolve(__dirname, dir)
@@ -9,12 +9,11 @@ const pathResolve = (dir: string) => resolve(__dirname, dir)
 export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
-  const isDeplayInGithub = env.VITE_DEPLOY_URL === 'github'
   const isDev = command === 'serve' // 开发环境
   const isBuild = command === 'build' // 生产环境
   return {
     plugins: [vue()],
-    base: isDeplayInGithub ? BASE_NAME : '/',
+    base: env.VITE_DEPLOY_BASE_URL || '/',
     resolve: {
       // 路径别名
       alias: [
