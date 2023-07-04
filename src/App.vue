@@ -13,7 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue action 修改 feature" />
+  <HelloWorld msg="base 设置 ./ 相对路径测试" />
 </template>
 
 <style scoped>
