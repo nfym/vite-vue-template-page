@@ -9,7 +9,8 @@
     "serve": "npm run dev",
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "deploy": "pnpm build --mode deploy",
+    "build:root": "pnpm build --mode root",
+    "deplay": "pnpm build && gh-pages -d dist",
     "preview": "vite preview",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
@@ -22,6 +23,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "vue": "^3.2.41"
   },
   "devDependencies": {
