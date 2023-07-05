@@ -49,12 +49,13 @@ jobs:
         # 打包
         run: npm run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          # 部署打包目录
-          folder: dist
-          # 密钥名
-          token: ${{ secrets.VITE_DEPLOY_TEST }}
-          # 分支
-          branch: gh-pages
+          # Upload dist repository
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
