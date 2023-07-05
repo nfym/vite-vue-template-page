@@ -15,33 +15,27 @@ permissions:
   pages: write
   id-token: write
 
-# 允许一个并发的部署
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
-  # 单次部署的工作描述
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     # 指定虚拟机环境
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
       - name: Checkout
         # 拉取 GitHub 仓库代码
         uses: actions/checkout@v3
 
-      - name: Set up Node
+      - name: Use Node.js ${{ matrix.node-version }}
         # 设定 Node.js 环境
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
+      - name: Install
         # 安装依赖
         run: npm install
 
@@ -49,13 +43,12 @@ jobs:
         # 打包
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # Upload dist repository
-          path: './dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          # 部署打包目录
+          folder: dist
+          # 密钥名
+          token: ${{ secrets.VITE_DEPLOY_TEST }}
+          # 分支
+          branch: gh-pages
