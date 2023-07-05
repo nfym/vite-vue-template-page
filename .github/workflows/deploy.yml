@@ -15,7 +15,13 @@ permissions:
   pages: write
   id-token: write
 
+# 允许一个并发的部署
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
+  # 单次部署的工作描述
   deploy:
     # 指定虚拟机环境
     runs-on: ubuntu-latest
@@ -37,11 +43,11 @@ jobs:
 
       - name: Install
         # 安装依赖
-        run: pnpm install
+        run: npm install
 
       - name: Build
         # 打包
-        run: pnpm run build
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
