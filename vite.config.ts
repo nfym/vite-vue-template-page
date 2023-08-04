@@ -8,7 +8,7 @@ const pathResolve = (dir: string) => resolve(__dirname, dir)
 
 export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
-  const env = loadEnv(mode, root)
+  const env = loadEnv(mode, root) // 获取环境变量
   const isDev = command === 'serve' // 开发环境
   const isBuild = command === 'build' // 生产环境
   return {
