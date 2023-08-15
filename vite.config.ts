@@ -23,7 +23,6 @@ export default defineConfig(({ command, mode }) => {
         { find: 'components', replacement: pathResolve('src/components') },
         { find: 'utils', replacement: pathResolve('src/utils') },
         { find: 'styles', replacement: pathResolve('src/styles') },
-        { find: 'build', replacement: pathResolve('build') },
         // 处理 vue-i18n 的控制台警告信息
         {
           find: 'vue-i18n',

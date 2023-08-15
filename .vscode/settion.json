@@ -1,0 +1,80 @@
+{
+  "files.autoSave": "onWindowChange",
+  "files.eol": "\n",
+  "files.associations": {
+    ".prettierrc": "jsonc",
+    "*.tsx": "typescriptreact",
+    "*.json": "jsonc"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.tabSize": 2,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.guides.bracketPairs": true,
+
+  "eslint.options": {
+    "extensions": [".js", ".vue", ".ts"]
+  },
+  "eslint.validate": ["javascript", "vue", "typescript", "html", "vue-html"],
+  "eslint.workingDirectories": [
+    ".eslintrc.js",
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.nodePath": "",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+
+  "stylelint.validate": ["vue", "less", "css", "html", "scss", "sass"],
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "[stylus]": {
+    "gitlens.codeLens.scopes": ["document"]
+  },
+
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.localesPaths": ["src/locales", "src/lang"],
+
+  "vetur.validation.template": false,
+
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
