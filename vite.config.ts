@@ -16,7 +16,14 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       webUpdateNotice({
-        logVersion: true
+        checkInterval: 0,
+        logVersion: true,
+        notificationProps: {
+          title: '标题',
+          description: 'System update, please refresh the page',
+          buttonText: '刷新',
+          dismissButtonText: '忽略'
+        }
       })
     ],
     base: env.VITE_DEPLOY_BASE_URL || '/',
