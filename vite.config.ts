@@ -16,11 +16,12 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       webUpdateNotice({
+        versionType: 'build_timestamp',
         checkInterval: 0,
         logVersion: true,
         notificationProps: {
           title: '标题',
-          description: 'System update, please refresh the page',
+          description: '系统更新, 请刷新页面',
           buttonText: '刷新',
           dismissButtonText: '忽略'
         }
