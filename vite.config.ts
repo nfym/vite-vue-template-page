@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { webUpdateNotice } from '@plugin-web-update-notification/vite'
 
 import { OUTPUT_DIR } from './build/constant'
 // 指定解析路径
@@ -12,7 +13,12 @@ export default defineConfig(({ command, mode }) => {
   const isDev = command === 'serve' // 开发环境
   const isBuild = command === 'build' // 生产环境
   return {
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      webUpdateNotice({
+        logVersion: true
+      })
+    ],
     base: env.VITE_DEPLOY_BASE_URL || '/',
     resolve: {
       // 路径别名

@@ -12,6 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="base 设置 ./ 相对路径测试" />
+
+  <div>测试更新通知插件</div>
 </template>
 
 <style scoped>
