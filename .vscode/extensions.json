@@ -2,10 +2,13 @@
   "recommendations": [
     "vue.volar",
     "vue.vscode-typescript-vue-plugin",
+    "mrmlnc.vscode-less",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
     "sonarsource.sonarlint-vscode",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    // "lokalise.i18n-ally",
+    "arkipedia.i18n-ally-pinyin"
   ]
 }
