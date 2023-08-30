@@ -1,10 +1,12 @@
 module.exports = {
   plugins: ['stylelint-order'],
   extends: [
+    // 解析非 css 文件
+    'stylelint-config-html',
+    // 规则包
     'stylelint-config-standard-less',
     'stylelint-config-rational-order'
   ],
-  customSyntax: 'postcss-less',
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   rules: {
     'function-no-unknown': null,
@@ -17,29 +19,5 @@ module.exports = {
         ignoreFunctions: ['v-bind', 'var']
       }
     ]
-  },
-  overrides: [
-    {
-      files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
-      customSyntax: 'postcss-html',
-      rules: {
-        'selector-pseudo-class-no-unknown': [
-          true,
-          {
-            ignorePseudoClasses: ['deep']
-          }
-        ],
-        'selector-pseudo-element-no-unknown': [
-          true,
-          {
-            ignorePseudoElements: ['v-deep', 'v-bind']
-          }
-        ]
-      }
-    },
-    {
-      files: ['*.less', '**/*.less'],
-      customSyntax: 'postcss-less'
-    }
-  ]
+  }
 }
