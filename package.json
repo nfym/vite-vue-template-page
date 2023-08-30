@@ -52,7 +52,6 @@
     "rimraf": "^5.0.1",
     "stylelint": "^15.10.3",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-less": "^1.0.0",
     "stylelint-less": "^1.0.6",
