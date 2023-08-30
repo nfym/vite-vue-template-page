@@ -5,6 +5,7 @@ module.exports = {
     'stylelint-config-html',
     // 规则包
     'stylelint-config-standard-less',
+    'stylelint-config-recommended-vue',
     'stylelint-config-rational-order'
   ],
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
