@@ -11,13 +11,7 @@ module.exports = {
     'stylelint-config-rational-order' // 排序规则包
   ],
   // ↓忽略文件
-  ignoreFiles: [
-    '**/*.js',
-    '**/*.jsx',
-    '**/*.tsx',
-    '**/*.ts',
-    '**/styles/lib/*'
-  ],
+  ignoreFiles: ['**/styles/lib/*'],
   rules: {
     'function-no-unknown': null,
     'selector-class-pattern': null,
@@ -29,5 +23,11 @@ module.exports = {
         ignoreFunctions: ['v-bind', 'var']
       }
     ]
-  }
+  },
+  overrides: [
+    {
+      files: ['*/*.less', '**/*.less'],
+      customSyntax: 'postcss-less'
+    }
+  ]
 }
