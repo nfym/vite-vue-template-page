@@ -1,11 +1,11 @@
 import { createHtmlPlugin } from 'vite-plugin-html'
 
-export default function configHtmlPlugin() {
+export default function configHtmlPlugin(env: ViteEnv) {
   return createHtmlPlugin({
     minify: true,
     inject: {
       data: {
-        title: 'my vite app'
+        title: env.VITE_GLOB_APP_TITLE
       }
     }
   })
