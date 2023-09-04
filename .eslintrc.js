@@ -32,6 +32,7 @@ module.exports = {
         ignores: ['Index']
       }
     ],
+    'vue/comment-directive': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     // ↓是否允许使用any类型
     '@typescript-eslint/no-explicit-any': 'off',

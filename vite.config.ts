@@ -1,6 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { webUpdateNotice } from '@plugin-web-update-notification/vite'
+import createVitePlugins from './build/plugin'
 
 import { OUTPUT_DIR } from './build/constant'
 // 指定解析路径
@@ -13,20 +12,7 @@ export default defineConfig(({ command, mode }) => {
   const isDev = command === 'serve' // 开发环境
   const isBuild = command === 'build' // 生产环境
   return {
-    plugins: [
-      vue(),
-      webUpdateNotice({
-        versionType: 'build_timestamp',
-        checkInterval: 0,
-        logVersion: true,
-        notificationProps: {
-          title: '标题',
-          description: '系统更新, 请刷新页面',
-          buttonText: '刷新',
-          dismissButtonText: '忽略'
-        }
-      })
-    ],
+    plugins: createVitePlugins(isBuild),
     base: env.VITE_DEPLOY_BASE_URL || '/',
     resolve: {
       // 路径别名
