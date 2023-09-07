@@ -1,16 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
+//
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/logo.svg" class="logo" alt="Vite logo" />
-    </a>
-  </div>
-  <HelloWorld msg="base 设置 ./ 相对路径测试" />
-
-  <div>测试更新通知插件</div>
+  <router-view />
 </template>
 
 <style scoped>

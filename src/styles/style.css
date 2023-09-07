@@ -21,6 +21,7 @@ a {
   color: #646cff;
   font-weight: 500;
   text-decoration: inherit;
+  cursor: pointer;
 }
 
 a:hover {
@@ -33,11 +34,6 @@ body {
   min-height: 100vh;
   margin: 0;
   place-items: center;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -53,7 +49,7 @@ button {
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: #196afb;
 }
 
 button:focus,
