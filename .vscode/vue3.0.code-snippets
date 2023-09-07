@@ -1,0 +1,29 @@
+{
+  "Vue3.0快速生成模板": {
+    "scope": "vue",
+    "prefix": "Vue3.0",
+    "body": [
+      "<template>",
+      "  <div  :class=\"prefixCls\">\n",
+      "  </div>",
+      "</template>\n",
+      "<script lang=\"ts\">",
+      "import { defineComponent } from \"vue\"",
+      "import { usePrefix } from \"@/hooks\"",
+      "export default defineComponent({",
+      "  name:\"\",",
+      "  setup() {",
+      "  const { prefixCls } = usePrefix('')\n",
+      "  return { prefixCls }",
+      "  }",
+      "})",
+      "</script>\n",
+      "<style lang=\"less\" scoped>",
+      "@prefix-cls: ~'';\n",
+      ".@{prefix-cls} {}",
+      "</style>",
+      "$2"
+    ],
+    "description": "Vue3.0"
+  }
+}

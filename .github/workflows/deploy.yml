@@ -4,7 +4,7 @@ name: VITE DEPLOY TEST
 on:
   push:
     # 推送到指定分支时触发
-    branches: [master, feature]
+    branches: [feature]
 
   # 这个选项可以使你手动在 Action tab 页面触发工作流
   workflow_dispatch:
