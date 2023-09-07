@@ -25,6 +25,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "ant-design-vue": "4.x",
     "vue": "^3.3.4",
     "vue-router": "4"
   },

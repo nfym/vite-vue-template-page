@@ -1,9 +1,9 @@
 <!--
  * @Description: 系统异常页面 403、404 等
  * @Date: 2023-09-06 17:09:25
- * @LastEditTime: 2023-09-06 18:06:36
+ * @LastEditTime: 2023-09-07 17:26:03
 -->
-<script lang="tsx">
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSwitchPage } from '@/hooks'
