@@ -1,1 +1,0 @@
-import{d as a,r as s,_ as e,g as n,o as r,c as t,b as o,w as d,n as l,h as i}from"./index-02d44e3c.js";const u=e(a({name:"ErrorPage",setup:()=>({prefixCls:s("data-manage-list")})}),[["render",function(a,s,e,u,f,c){const m=n("a-button");return r(),t("main",{class:l(a.prefixCls)},[o(m,null,{default:d((()=>[i("Add")])),_:1})],2)}]]);export{u as default};
