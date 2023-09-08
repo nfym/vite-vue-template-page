@@ -1,14 +1,14 @@
 /*
  * @Description: 随便加个模块验证 import.meta.glob() 自动导入模块路由配置
  * @Date: 2023-09-07 15:20:42
- * @LastEditTime: 2023-09-08 10:44:26
+ * @LastEditTime: 2023-09-08 11:23:40
  */
 import type { RouteRecordRaw } from 'vue-router'
 
-const about: RouteRecordRaw = {
+const dataManage: RouteRecordRaw = {
   path: '/dataManage',
   name: 'DataManage',
-  // component: () => import('@/components/basicLayout/Index.vue'),
+  component: () => import('@/components/basicLayout/Index.vue'),
   redirect: '/dataManage/index',
   meta: {
     hideChildrenInMenu: true,
@@ -28,4 +28,4 @@ const about: RouteRecordRaw = {
   ]
 }
 
-export default about
+export default dataManage

@@ -1,7 +1,7 @@
 /*
  * @Description: 创建路由
  * @Date: 2023-09-06 16:21:03
- * @LastEditTime: 2023-09-08 10:32:40
+ * @LastEditTime: 2023-09-08 11:00:37
  */
 import { createRouter, createWebHistory } from 'vue-router'
 import { basicRoutes, modulesRoutes } from './routes'
@@ -11,9 +11,9 @@ import type { App } from 'vue'
 const router = createRouter({
   history: createWebHistory(),
   // 应该添加到路由器的初始路由列表。
-  routes: [...basicRoutes, ...modulesRoutes],
+  routes: [...basicRoutes, ...modulesRoutes]
   // 是否应该禁止尾部斜杠。默认 false
-  strict: true
+  // strict: true
 })
 
 // 配置路由器

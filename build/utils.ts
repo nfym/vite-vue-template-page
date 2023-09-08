@@ -1,9 +1,14 @@
+/*
+ * @Description: 构建相关工具方法
+ * @Date: 2023-09-04 16:37:22
+ * @LastEditTime: 2023-09-08 11:01:34
+ */
 /**
  * @description: loadEnv 获取环境变量都为 string. 此函数保留 boolean、number 等原本类型
  * @param {Recordable} envConf
  */
 export function wrapperEnv(envConf: Recordable): ViteEnv {
-  console.log('🚀 ~ file: utils.ts:3 ~ wrapperEnv ~ envConf:', envConf)
+  console.log('🚀 ~ build/utils.ts ~ wrapperEnv ~ envConf:', envConf)
   const ret: any = {}
 
   for (const envName of Object.keys(envConf)) {

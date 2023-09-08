@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import setupRoute from './router'
 import setupComponent from '@/utils/setupComponents'
-import '@/styles/style.css'
+import '@/styles/index.less'
 
 async function bootstrap() {
   const app = createApp(App)

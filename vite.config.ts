@@ -58,6 +58,14 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         }
       }
     },
+    css: {
+      preprocessorOptions: {
+        less: {
+          additionalData: '@import "@/styles/variable.less";',
+          javascriptEnabled: true
+        }
+      }
+    },
     // 生产环境打包配置
     build: {
       outDir: OUTPUT_DIR,
