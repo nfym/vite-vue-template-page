@@ -1,7 +1,7 @@
 /*
  * @Description: 随便加个模块验证 import.meta.glob() 自动导入模块路由配置
  * @Date: 2023-09-07 15:20:42
- * @LastEditTime: 2023-09-07 16:32:38
+ * @LastEditTime: 2023-09-08 10:44:26
  */
 import type { RouteRecordRaw } from 'vue-router'
 
@@ -20,7 +20,7 @@ const about: RouteRecordRaw = {
     {
       path: 'index',
       name: 'DataList',
-      component: () => import('@/views/dataManage/list/index.vue'),
+      component: () => import('@/views/dataManage/list/Index.vue'),
       meta: {
         hideMenu: true
       }
