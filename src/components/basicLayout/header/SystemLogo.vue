@@ -6,7 +6,7 @@ const prefixCls = ref('app-logo')
 const switchPage = useSwitchPage()
 
 function goHome(): void {
-  switchPage({ name: 'Dashboard' })
+  switchPage({ name: 'DataManage' })
 }
 </script>
 

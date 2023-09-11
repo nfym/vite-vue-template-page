@@ -5,10 +5,10 @@
  */
 import type { App } from 'vue'
 import setupAntComponent from './antComponent'
-// import setupGlobalComponent from './globalComponent'
+import setupGlobalComponent from './globalComponent'
 export default function setupComponents(app: App) {
   // 全局注册自定义组件
-  // setupGlobalComponent(app)
+  setupGlobalComponent(app)
 
   // 全局注册 antd 组件库组件
   setupAntComponent(app)

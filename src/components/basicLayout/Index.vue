@@ -1,7 +1,7 @@
 <!--
- * @Description:
+ * @Description: 系统基本布局
  * @Date: 2023-09-08 11:04:03
- * @LastEditTime: 2023-09-08 18:21:37
+ * @LastEditTime: 2023-09-11 10:57:52
 -->
 <template>
   <div :class="prefixCls">
@@ -10,9 +10,10 @@
       <!-- <HeadMenu />-->
       <UserInfo />
     </header>
-    <!-- <comp-scrollbar>
-      <CompContent />
-    </comp-scrollbar> -->
+
+    <comp-scrollbar>
+      <MainContainer />
+    </comp-scrollbar>
   </div>
 </template>
 
@@ -20,8 +21,8 @@
 import { ref } from 'vue'
 import SystemLogo from './header/SystemLogo.vue'
 import UserInfo from './header/UserInfo.vue'
-// import HeadMenu from 'components/headMenu/Index.vue'
-import CompContent from './CompContent.vue'
+// import HeadMenu from './header/headMenu.vue'
+import MainContainer from './body/MainContainer.vue'
 
 const prefixCls = ref('basic-layout')
 </script>
@@ -40,15 +41,11 @@ const prefixCls = ref('basic-layout')
   &__header {
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     width: 100vw;
     min-height: 4rem;
-    padding: 0 1.5rem 0 1rem;
+    padding: 0 1rem;
     overflow: hidden;
     background-color: @gray-1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 </style>

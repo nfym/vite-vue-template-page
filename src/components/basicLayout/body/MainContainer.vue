@@ -1,16 +1,16 @@
 <!--
- * @Description:
+ * @Description: 页面主体容器
  * @Date: 2023-09-08 17:54:06
- * @LastEditTime: 2023-09-08 18:42:48
+ * @LastEditTime: 2023-09-11 11:01:56
 -->
 <template>
-  <section
+  <main
     :class="[
       `${prefixCls}__container`,
       isFullContainer && `${prefixCls}__container-full`
     ]"
   >
-    <section
+    <div
       :class="[
         `${prefixCls}__content`,
         isFullContent && `${prefixCls}__content-full`
@@ -19,8 +19,8 @@
       <router-view v-slot="{ Component }">
         <component :is="Component" />
       </router-view>
-    </section>
-  </section>
+    </div>
+  </main>
 </template>
 <script lang="ts">
 import { ref } from 'vue'
@@ -44,15 +44,15 @@ export default defineComponent({
 <style scoped lang="less">
 @prefix-cls: ~'basic-layout';
 @containerPadding: 2rem;
-@contentPadding: @padding-lg;
+@contentPadding: 1.5rem;
 
 .@{prefix-cls}__container {
   display: flex;
-  flex: 1;
   min-width: 80rem;
   height: calc(100vh - 4rem);
   min-height: 37.5rem;
   padding: @containerPadding;
+  background-color: @container-background;
 }
 
 .@{prefix-cls}__container-full {
@@ -64,13 +64,11 @@ export default defineComponent({
   width: 100%;
   min-width: 77rem;
   padding: @contentPadding;
-  overflow: hidden;
   background-color: @gray-1;
-  border-radius: @containerPadding;
+  border-radius: @contentPadding;
 }
 
 .@{prefix-cls}__content-full {
   padding: 0;
-  // border-radius: 0;
 }
 </style>

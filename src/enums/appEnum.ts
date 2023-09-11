@@ -1,3 +1,4 @@
+import type { InjectionKey } from 'vue'
 export const HEAD_BAR_MINI_HEIGHT = 48
 export const HEAD_BAR_SHOW_TIT_MINI_HEIGHT = 80
 export const HEAD_BAR_HEIGHT = 64
@@ -13,3 +14,9 @@ export const themeConfig = {
   success: '#52c41a',
   error: '#ff4d4f'
 }
+
+// provide/inject
+// reload
+export const RELOAD: InjectionKey<() => void> = Symbol()
+// resetScrollbar
+export const RESET_SCROLLBAR: InjectionKey<() => void> = Symbol()

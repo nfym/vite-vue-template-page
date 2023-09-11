@@ -1,7 +1,7 @@
 <!--
  * @Description: 登录页
  * @Date: 2023-09-06 18:11:26
- * @LastEditTime: 2023-09-08 17:37:51
+ * @LastEditTime: 2023-09-11 11:34:43
 -->
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -35,13 +35,13 @@ function handleCLickLogin() {
   height: 100vh;
 
   &__logo {
-    height: 6em;
-    padding: 1.5em 0;
+    height: 6rem;
+    padding: 1.5rem;
     will-change: filter;
   }
 
   &__logo:hover {
-    filter: drop-shadow(0 0 2em #78b4fe);
+    filter: drop-shadow(0 0 2rem #78b4fe);
   }
 }
 </style>

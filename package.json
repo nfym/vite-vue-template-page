@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "ant-design-vue": "4.x",
+    "resize-observer-polyfill": "^1.5.1",
     "vue": "^3.3.4",
     "vue-router": "4"
   },
