@@ -1,9 +1,15 @@
+<!--
+ * @Description: 系统 logo & 标题
+ * @Date: 2023-09-08 11:21:45
+ * @LastEditTime: 2023-09-11 15:40:33
+-->
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useSwitchPage } from '@/hooks'
+import { useSwitchPage, useI18n } from '@/hooks'
 
 const prefixCls = ref('app-logo')
 const switchPage = useSwitchPage()
+const { $t } = useI18n()
 
 function goHome(): void {
   switchPage({ name: 'DataManage' })
@@ -19,7 +25,7 @@ function goHome(): void {
         alt="system_logo"
       />
       <div :class="`${prefixCls}__title`">
-        <span>Vite Template</span>
+        <span>{{ $t('fields.title') }}</span>
       </div>
     </div>
   </section>

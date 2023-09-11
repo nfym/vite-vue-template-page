@@ -30,12 +30,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         { find: 'api', replacement: pathResolve('src/api') },
         { find: 'components', replacement: pathResolve('src/components') },
         { find: 'utils', replacement: pathResolve('src/utils') },
-        { find: 'styles', replacement: pathResolve('src/styles') },
-        // 处理 vue-i18n 的控制台警告信息
-        {
-          find: 'vue-i18n',
-          replacement: 'vue-i18n/dist/vue-i18n.cjs.js'
-        }
+        { find: 'styles', replacement: pathResolve('src/styles') }
       ]
     },
     server: {
