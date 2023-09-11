@@ -17,6 +17,7 @@ const LoginRoute: RouteRecordRaw = {
 const PAGE_NOT_FOUND_ROUTE: RouteRecordRaw = {
   path: '/:pathMatch(.*)*',
   name: 'ErrorPage',
+  component: () => import('@/components/basicLayout/Index.vue'),
   children: [
     {
       path: '/:pathMatch(.*)*',
