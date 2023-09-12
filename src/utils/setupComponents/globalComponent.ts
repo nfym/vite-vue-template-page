@@ -6,11 +6,11 @@
 
 import type { App } from 'vue'
 import Scrollbar from 'components/scrollbar/Index.vue'
-// import Toolbar from 'components/toolbar/Index.vue'
+import Toolbar from 'components/toolbar/Index.vue'
 // import FooterBar from 'components/footerBar/Index.vue'
 
 export default function setupGlobalComponent(app: App) {
   app.component('CompScrollbar', Scrollbar)
-  // app.component('CompToolbar', Toolbar)
+  app.component('CompToolbar', Toolbar)
   // app.component('CompFooterBar', FooterBar)
 }
