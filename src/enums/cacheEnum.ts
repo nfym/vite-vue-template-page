@@ -1,17 +1,13 @@
 // token key
 export const TOKEN_KEY = 'TOKEN'
 
-export const LOCALE_KEY = 'LOCALE'
+// app config: locale、theme
+export const APP_CONFIG_KEY = 'APP_CONFIG'
 
 // user info key
 export const USER_INFO_KEY = 'USER__INFO'
 
 // role info key
-export const ROLES_KEY = 'ROLES__KEY'
+export const ROLES_KEY = 'ROLES'
 
-export const PROJECT_CONFIG_KEY = 'PROJECT_CONFIG_KEY'
-
-export enum CacheTypeEnum {
-  SESSION,
-  LOCAL
-}
+export const LocalStorageKeys = typeof TOKEN_KEY

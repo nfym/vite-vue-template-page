@@ -15,6 +15,11 @@ export const themeConfig = {
   error: '#ff4d4f'
 }
 
+export enum LocaleEnum {
+  ZH_CN = 'zh_CN',
+  EN_US = 'en_US'
+}
+
 // provide/inject
 // reload
 export const RELOAD: InjectionKey<() => void> = Symbol()

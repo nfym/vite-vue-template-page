@@ -1,12 +1,15 @@
 <!--
  * @Description: 登录页
  * @Date: 2023-09-06 18:11:26
- * @LastEditTime: 2023-09-12 15:02:21
+ * @LastEditTime: 2023-09-15 17:53:16
 -->
 <script setup lang="ts">
-import { ref, reactive, UnwrapRef } from 'vue'
+import { ref, reactive, computed, UnwrapRef } from 'vue'
 import { useRoute } from 'vue-router'
+import { useAppConfigStore } from '@/store/modules/config'
 import { useSwitchPage, useI18n } from '@/hooks'
+import { getAppLocalConfig, setAppLocalConfig } from '@/utils/cache'
+import { LocaleEnum } from '@/enums/appEnum'
 
 interface FormState {
   username: string
@@ -42,10 +45,20 @@ const handleFinish = async () => {
   }
 }
 
+const appConfigStore = useAppConfigStore()
+const localeState = computed(() => appConfigStore.locale)
+const isZH_CN = computed(() => appConfigStore.locale === LocaleEnum.ZH_CN)
+
 const toggleLocale = () => {
-  locale.value = locale.value == 'en_US' ? 'zh_CN' : 'en_US'
+  // 更新 store
+  appConfigStore.setLocale(isZH_CN.value ? LocaleEnum.EN_US : LocaleEnum.ZH_CN)
+  // 更新 i18n 语言
+  locale.value = localeState.value
+  // 更新 localStorage
+  setAppLocalConfig({ ...getAppLocalConfig(), locale: localeState.value })
 }
-const toggleMode = () => {
+
+const toggleThemeMode = () => {
   toolbarData[0].icon =
     toolbarData[0].icon === 'ri-moon-line' ? 'ri-sun-line' : 'ri-moon-line'
 }
@@ -55,7 +68,7 @@ const toolbarData = reactive([
     icon: 'ri-sun-line',
     title: $t('login.toggleMode'),
 
-    func: toggleMode
+    func: toggleThemeMode
   },
   {
     icon: 'ri-translate',
