@@ -1,7 +1,7 @@
 <!--
  * @Description: 系统 logo & 标题
  * @Date: 2023-09-08 11:21:45
- * @LastEditTime: 2023-09-11 15:40:33
+ * @LastEditTime: 2023-09-15 14:24:22
 -->
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -19,11 +19,7 @@ function goHome(): void {
 <template>
   <section :class="prefixCls">
     <div :class="`${prefixCls}__click-area`" @click="goHome">
-      <img
-        :class="`${prefixCls}__logo`"
-        src="/public/logo.svg"
-        alt="system_logo"
-      />
+      <img :class="`${prefixCls}__logo`" src="/logo.svg" alt="system_logo" />
       <div :class="`${prefixCls}__title`">
         <span>{{ $t('fields.title') }}</span>
       </div>
