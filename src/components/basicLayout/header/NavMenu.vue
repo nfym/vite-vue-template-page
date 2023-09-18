@@ -1,7 +1,7 @@
 <!--
  * @Description: 顶部导航
  * @Date: 2023-09-18 09:44:44
- * @LastEditTime: 2023-09-18 14:25:56
+ * @LastEditTime: 2023-09-18 14:58:29
 -->
 <template>
   <section :class="prefixCls">
@@ -21,7 +21,7 @@
           </template>
 
           <template v-for="subItem in item.children">
-            <a-menu-item v-if="subItem.meta.isMenu" :key="subItem.name">
+            <a-menu-item v-if="subItem.meta?.isMenu" :key="subItem.name">
               <ItemContent :item="subItem.meta" />
             </a-menu-item>
           </template>
@@ -90,7 +90,6 @@ async function handleMenuClick(option: MenuClickOption) {
   const rootRoute = route.matched.find((item) => item.name === option.key)
   if (rootRoute && [rootRoute.redirect, rootRoute.path].includes(route.path)) {
     // 刷新当前目录
-    // location.reload()
     reload()
   }
 
