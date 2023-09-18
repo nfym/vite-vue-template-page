@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { theme } from 'ant-design-vue'
+defineOptions({ name: 'App' })
 import { useReload } from '@/hooks'
 const { isRouterAlive } = useReload()
-console.log('🚀 ~ file: App.vue:5 ~ ant-design-vue theme:', theme)
 </script>
 
 <template>
