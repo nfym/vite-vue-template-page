@@ -56,17 +56,23 @@ export default {
   },
 
   dashboard: {
-    title: '控制台'
+    title: 'dashboard'
   },
 
   demo: {
-    title: '示例'
+    title: 'demo'
   },
 
   personalCenter: {
-    title: '个人中心',
+    title: 'personal center',
     basicInfo: {
-      title: '基本信息'
+      title: 'basic info'
     }
+  },
+  dataManage: {
+    title: 'dataManage'
+  },
+  taskManage: {
+    title: 'taskManage'
   }
 }

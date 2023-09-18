@@ -69,5 +69,12 @@ export default {
     basicInfo: {
       title: '基本信息'
     }
+  },
+
+  dataManage: {
+    title: '数据管理'
+  },
+  taskManage: {
+    title: '任务管理'
   }
 }

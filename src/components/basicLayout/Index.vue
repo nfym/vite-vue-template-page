@@ -1,13 +1,13 @@
 <!--
  * @Description: 系统基本布局
  * @Date: 2023-09-08 11:04:03
- * @LastEditTime: 2023-09-11 10:57:52
+ * @LastEditTime: 2023-09-18 09:47:43
 -->
 <template>
   <div :class="prefixCls">
     <header :class="`${prefixCls}__header`">
       <SystemLogo />
-      <!-- <HeadMenu />-->
+      <HeadMenu />
       <UserInfo />
     </header>
 
@@ -21,7 +21,7 @@
 import { ref } from 'vue'
 import SystemLogo from './header/SystemLogo.vue'
 import UserInfo from './header/UserInfo.vue'
-// import HeadMenu from './header/headMenu.vue'
+import HeadMenu from './header/NavMenu.vue'
 import MainContainer from './body/MainContainer.vue'
 
 const prefixCls = ref('basic-layout')
