@@ -11,7 +11,7 @@
       <UserInfo />
     </header>
 
-    <comp-scrollbar>
+    <comp-scrollbar :native="false">
       <MainContainer />
     </comp-scrollbar>
   </div>

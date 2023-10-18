@@ -27,9 +27,6 @@
 </template>
 <script lang="ts">
 import { addResizeListener, removeResizeListener } from 'utils/resize-event'
-const scrollbar = {
-  native: false
-}
 import { toObject } from './util'
 import {
   defineComponent,
@@ -48,30 +45,36 @@ import { RESET_SCROLLBAR } from '@/enums/appEnum'
 
 export default defineComponent({
   name: 'CompScrollbar',
-  // inheritAttrs: false,
   components: { Bar },
   props: {
+    // 是否采用原生滚动
     native: {
       type: Boolean,
-      default: scrollbar?.native ?? false
+      default: false
     },
+    // 容器样式
     wrapStyle: {
       type: [String, Array],
       default: ''
     },
+    // 	容器样式名
     wrapClass: {
       type: [String, Array],
       default: ''
     },
+    // 展示视图的样式名
     viewClass: {
       type: [String, Array],
       default: ''
     },
+    // 展示视图的样式名
     viewStyle: {
       type: [String, Array],
       default: ''
     },
-    noresize: Boolean, // 如果 container 尺寸不会发生变化，最好设置它可以优化性能
+    // 容器大小是否不可变。如果 container 尺寸不会发生变化，最好设置它可以优化性能
+    noresize: Boolean,
+    // 渲染容器的标签
     tag: {
       type: String,
       default: 'div'
