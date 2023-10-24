@@ -53,14 +53,14 @@ jobs:
 
       - name: Build
         # 打包
-        run: pnpm run build
+        run: pnpm deplay
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 部署打包目录
-          folder: dist
-          # 密钥名
-          token: ${{ secrets.VITE_DEPLOY_TEST }}
-          # 部署后提交到那个分支
-          branch: gh-pages
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     # 部署打包目录
+      #     folder: dist
+      #     # 密钥名
+      #     token: ${{ secrets.VITE_DEPLOY_TEST }}
+      #     # 部署后提交到那个分支
+      #     branch: gh-pages
