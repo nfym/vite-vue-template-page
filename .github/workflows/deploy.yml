@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15]
+        node-version: [16]
 
     # 步骤
     steps:
