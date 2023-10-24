@@ -3,18 +3,14 @@
  * @Date: 2023-09-06 16:21:03
  * @LastEditTime: 2023-09-18 10:08:04
  */
-import {
-  createRouter,
-  createWebHashHistory,
-  createWebHistory
-} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { basicRoutes, modulesRoutes } from './routes'
 import type { App } from 'vue'
 
 // 部署至 github 使用 hash 模式避免刷新后 404，其他平台使用 histoty
 const histoty =
-  import.meta.env.MODE === 'production'
-    ? createWebHashHistory()
+  import.meta.env.BASE_URL === 'production'
+    ? createWebHistory(import.meta.env.BASE_URL)
     : createWebHistory()
 
 // 创建一个可以被 Vue 应用程序使用的路由实例
