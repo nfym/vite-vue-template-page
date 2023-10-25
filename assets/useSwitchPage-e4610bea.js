@@ -1,0 +1,1 @@
+import{B as n}from"./index-2f1b60e6.js";var r=(n=>(n.PUSH="PUSH",n.REPLACE="REPLACE",n.BACK="BACK",n))(r||{});function P(P=n()){const{push:o,replace:t,back:A}=P,C={[r.PUSH]:o,[r.REPLACE]:t,[r.BACK]:A};return function(n,P=r.PUSH){C[P](n)}}export{P as u};
