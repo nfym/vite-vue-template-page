@@ -1,0 +1,6 @@
+import { Plugin } from 'vite';
+import { Options } from '@plugin-web-update-notification/core';
+
+declare function webUpdateNotice(options?: Options): Plugin;
+
+export { webUpdateNotice };

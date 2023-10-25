@@ -1,4 +1,4 @@
-run = "npm i && npm run dev"
+run = "pnpm i && pnpm run dev"
 language = "node"
 
 [env]

@@ -1,0 +1,42 @@
+{
+  "name": "@plugin-web-update-notification/core",
+  "type": "module",
+  "version": "1.6.5",
+  "description": "Detect web page updates and notify",
+  "author": "Utopia",
+  "license": "MIT",
+  "homepage": "https://github.com/GreatAuk/plugin-web-update-notification",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreatAuk/plugin-web-update-notification",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/GreatAuk/plugin-web-update-notification/issues"
+  },
+  "keywords": [
+    "web-update-notification"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "find-up": "^6.3.0"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsup && tsup --config tsup.config.injectFile.ts",
+    "dev": "tsup --watch"
+  }
+}

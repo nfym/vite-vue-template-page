@@ -1,0 +1,58 @@
+{
+  "name": "czg",
+  "version": "1.7.1",
+  "description": "Interactive Commitizen CLI that generate standardized git commit message",
+  "author": "Zhengqbbb <zhengqbbb@gmail.com> (https://github.com/Zhengqbbb)",
+  "license": "MIT",
+  "homepage": "https://cz-git.qbb.sh/cli/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zhengqbbb/cz-git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/Zhengqbbb/cz-git/issues"
+  },
+  "keywords": [
+    "openai",
+    "commit",
+    "commit CLI",
+    "commit message",
+    "commitizen",
+    "commitizen-cli",
+    "cli",
+    "cz-git",
+    "cz-customizable"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "lib/index.js",
+  "types": "lib/config.d.ts",
+  "bin": {
+    "czg": "bin/index.js",
+    "git-czg": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=v12.20.0"
+  },
+  "devDependencies": {
+    "cachedir": "^2.3.0",
+    "dedent": "^0.7.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "8.2.4",
+    "minimist": "^1.2.8",
+    "rimraf": "3.0.2",
+    "cz-git": "1.7.1"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf lib",
+    "release:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  }
+}

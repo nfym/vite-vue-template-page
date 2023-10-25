@@ -1,0 +1,2 @@
+import{resolve as o}from"path";import{copyFileSync as s}from"fs";var t="@plugin-web-update-notification/core";var e="webUpdateNoticeInjectStyle",i="webUpdateNoticeInjectScript.global";var n=o("node_modules",t,"dist",`${i}.js`),c=o("node_modules",t,"dist",`${e}.css`);s(n,`dist/${i}.js`);s(c,`dist/${e}.css`);
+//# sourceMappingURL=pluginBuildScript.js.map

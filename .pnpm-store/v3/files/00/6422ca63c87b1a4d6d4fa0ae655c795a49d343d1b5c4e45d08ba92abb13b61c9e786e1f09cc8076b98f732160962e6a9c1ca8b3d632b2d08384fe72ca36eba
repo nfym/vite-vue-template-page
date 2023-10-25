@@ -1,0 +1,2 @@
+"use strict";var o=require("path"),s=require("fs");var t="@plugin-web-update-notification/core";var e="webUpdateNoticeInjectStyle",i="webUpdateNoticeInjectScript.global";var n=(0,o.resolve)("node_modules",t,"dist",`${i}.js`),c=(0,o.resolve)("node_modules",t,"dist",`${e}.css`);(0,s.copyFileSync)(n,`dist/${i}.js`);(0,s.copyFileSync)(c,`dist/${e}.css`);
+//# sourceMappingURL=pluginBuildScript.cjs.map
