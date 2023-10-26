@@ -36,7 +36,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
     server: {
       host: true,
       port: VITE_PORT, // 设置服务启动端口号，如果端口已经被使用，Vite 会自动尝试下一个可用的端口
-      open: true, // boolean | string 设置服务启动时是否自动打开浏览器，当此值为字符串时，会被用作 URL 的路径名
+      open: false, // boolean | string 设置服务启动时是否自动打开浏览器，当此值为字符串时，会被用作 URL 的路径名
       cors: true, // 为开发服务器配置 CORS，配置为允许跨域
       https: false,
       // 设置代理，根据项目实际情况配置
