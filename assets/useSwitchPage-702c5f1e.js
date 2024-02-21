@@ -1,0 +1,1 @@
+import{aR as n}from"./index-b7657dfd.js";var r=(n=>(n.PUSH="PUSH",n.REPLACE="REPLACE",n.BACK="BACK",n))(r||{});function P(P=n()){const{push:a,replace:o,back:t}=P,A={[r.PUSH]:a,[r.REPLACE]:o,[r.BACK]:t};return function(n,P=r.PUSH){A[P](n)}}export{P as u};
