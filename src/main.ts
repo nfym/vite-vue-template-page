@@ -4,6 +4,8 @@ import setupRoute from './router'
 import setupStore from './store'
 import setupComponent from '@/utils/setupComponents'
 import setupI18n from './lang'
+import setupGlobDirectives from '@/directives'
+
 import '@/styles/index.less'
 
 async function bootstrap() {
@@ -20,6 +22,9 @@ async function bootstrap() {
 
   // 注册路由
   setupRoute(app)
+
+  // 全局指令
+  setupGlobDirectives(app)
 
   app.mount('#app')
 }

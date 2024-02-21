@@ -1,7 +1,7 @@
 <!--
  * @Description: 登录页
  * @Date: 2023-09-06 18:11:26
- * @LastEditTime: 2023-09-15 17:53:16
+ * @LastEditTime: 2024-02-21 17:39:18
 -->
 <script setup lang="ts">
 import { ref, reactive, computed, UnwrapRef } from 'vue'
@@ -104,7 +104,8 @@ const toolbarData = reactive([
           >
             <a-form-item>
               <a-input
-                v-model:value.trim="formState.username"
+                v-model:value="formState.username"
+                v-trim
                 size="large"
                 :class="`${prefixCls}__form-input`"
                 placeholder="请输入 test"
