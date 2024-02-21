@@ -124,6 +124,9 @@ devDependencies:
   vite:
     specifier: ^4.4.9
     version: 4.4.9(@types/node@18.17.15)(less@4.2.0)(terser@5.19.4)
+  vite-plugin-compression:
+    specifier: ^0.5.1
+    version: 0.5.1(vite@4.4.9)
   vite-plugin-html:
     specifier: ^3.2.0
     version: 3.2.0(vite@4.4.9)
@@ -6420,6 +6423,19 @@ packages:
       replace-ext: 1.0.0
       unist-util-stringify-position: 1.1.2
       vfile-message: 1.1.1
+    dev: true
+
+  /vite-plugin-compression@0.5.1(vite@4.4.9):
+    resolution: {integrity: sha512-5QJKBDc+gNYVqL/skgFAP81Yuzo9R+EAf19d+EtsMF/i8kFUpNi3J/H01QD3Oo8zBQn+NzoCIFkpPLynoOzaJg==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      chalk: 4.1.2
+      debug: 4.3.4
+      fs-extra: 10.1.0
+      vite: 4.4.9(@types/node@18.17.15)(less@4.2.0)(terser@5.19.4)
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite-plugin-html@3.2.0(vite@4.4.9):
