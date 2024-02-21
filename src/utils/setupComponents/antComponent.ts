@@ -1,7 +1,7 @@
 /*
  * @Description: 全局注册 antd 组件
  * @Date: 2023-09-07 17:36:41
- * @LastEditTime: 2023-09-11 18:20:12
+ * @LastEditTime: 2024-02-21 18:37:28
  */
 import type { App } from 'vue'
 import { Button, Menu, Dropdown, Space, Row, Form, Input } from 'ant-design-vue'

@@ -4,14 +4,17 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteCompression from 'vite-plugin-compression'
 
 import configHtmlPlugin from './html'
+import antDesignVueResolverPlugin from './antDesignVueResolver'
 import configWebUpdateNotificationPlugin from './webUpdate'
 import configVisualizerConfig from './visualizer'
 
 export default function createVitePlugins(env: ViteEnv, isBuild: boolean) {
-  const vitePlugins: (PluginOption | PluginOption[])[] = [vue(), vueJsx()]
-
-  // vite-plugin-html
-  vitePlugins.push(configHtmlPlugin(env))
+  const vitePlugins: (PluginOption | PluginOption[])[] = [
+    vue(),
+    vueJsx(),
+    configHtmlPlugin(env), // vite-plugin-html
+    antDesignVueResolverPlugin() // 自动按需引入组件
+  ]
 
   // rollup-plugin-visualizer
   vitePlugins.push(configVisualizerConfig())

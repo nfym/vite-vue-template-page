@@ -8,7 +8,7 @@
 
 # 简介
 
-Vue3.0、Vite、 Ant-Design-Vue、TypeScript 后台解决方案模板，可以作为项目的启动模版。
+Vue3、Vite、 Ant-Design-Vue、TypeScript 后台解决方案模板，可以作为项目的启动模版。
 
 # Preview
 
