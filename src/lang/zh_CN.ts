@@ -46,7 +46,7 @@ export default {
   login: {
     inputLoginAccount: '请输入登录账号',
     inputLoginPwd: '请输入密码',
-    toggleMode: '切换主题',
+    toggleMode: 'TODO:切换主题',
     toggleLocale: '中英切换',
     error: '用户名或密码错误'
   },
