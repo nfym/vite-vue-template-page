@@ -1,17 +1,25 @@
-declare interface ViteEnv {
-  // Dev
-  VITE_PORT: number // dev 启动端口
-  VITE_USE_MOCK: boolean
+/**
+ * 这里存放一些零散的全局类型，无需引入直接在 .vue 、.ts 、.tsx 文件使用即可获得类型提示
+ */
 
-  // Build
-  VITE_PUBLIC_PATH: string // 打包公共基础路径
-  VITE_API_BASE_URL: string // 接口请求地址
-  VITE_APP_TITLE: string // 系统名称
-  VITE_USE_PWA: boolean
-  VITE_USE_CDN: boolean
-  VITE_DROP_CONSOLE: boolean // 打包是否移除 console
-  VITE_BUILD_COMPRESS: 'gzip' | 'brotli' | 'none'
-  VITE_LEGACY: boolean
+// 分页
+interface PaginationBase<T> {
+  total: number
+  rows: T[]
+}
+
+// 字典
+interface Dictionary {
+  label: string
+  value: string
 }
 
 declare type Recordable<T = any> = Record<string, T>
+
+type Simplify<T> = {
+  [P in keyof T]: T[P]
+}
+
+type SetOptional<T, K extends keyof T> = Simplify<
+  Partial<Pick<T, K>> & Pick<T, Exclude<keyof T, K>>
+>
